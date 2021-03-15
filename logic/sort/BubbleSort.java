@@ -2,12 +2,13 @@ import java.util.Arrays;
 
 /**
  * 冒泡排序
- * 平均：时间复杂度：O(n²)
+ * 平均：时间复杂度：O(n²) 空间复杂度：O(1)
  * 过程：比较相邻的两个数，如果后者小，就交换位置，最终从小到大排列
+ * 稳定性：稳定
  */
 
 public class BubbleSort{
-    //未优化
+    // 未优化
     public static void bubble1(int[] arr){
         for (int i=0;i < arr.length-1;i++){
             for (int j=0;j < arr.length-1-i;j++){
@@ -20,20 +21,25 @@ public class BubbleSort{
         }
     }
 
-    //优化
+    // 优化
     public static void bubble2(int[] arr){
-        boolean flag;//是否交换的标志
+        boolean flag;  // 是否交换的标志
         for (int i=0;i < arr.length-1;i++){
-            flag = false;//每次遍历的标志位都先置为false才能判断后面的元素是否发送了变化
+            // 每次遍历的标志位都先置为false才能判断后面的元素是否发送了变化
+            flag = false;
             for (int j=0;j < arr.length-1-i;j++){
-                if (arr[j+1]<arr[j]){//置换元素
+                // 置换元素
+                if (arr[j+1]<arr[j]){
                     arr[j+1] = arr[j+1] + arr[j];
                     arr[j] = arr[j+1] - arr[j];
                     arr[j+1] = arr[j+1] - arr[j];
                     flag = true;
                 }
             }
-            if(!flag)break;//优化核心
+            if(!flag){
+                // 优化核心
+                break;
+            }
         }
     }
 

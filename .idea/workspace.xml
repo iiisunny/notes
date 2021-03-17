@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9bd54c1-ad89-4ecd-9ab7-3bfd7d251526" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/logic/update.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +46,51 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/logic/jianzhi" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Test02">
+    <configuration name="Test01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test01" />
+      <module name="logic" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test02" />
+      <module name="logic" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Test02" />
+        <item itemvalue="Application.Test01" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -56,6 +101,7 @@
       <option name="presentableId" value="Default" />
       <updated>1615815019619</updated>
       <workItem from="1615815020807" duration="34000" />
+      <workItem from="1615939835760" duration="2141000" />
     </task>
     <servers />
   </component>
@@ -72,5 +118,24 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1219" height="264" key="GridCell.Tab.0.bottom" timestamp="1615943005217">
+      <screen x="-1920" y="25" width="1920" height="1008" />
+    </state>
+    <state width="1219" height="264" key="GridCell.Tab.0.bottom/0.25.1680.1025/-1920.25.1920.1008@-1920.25.1920.1008" timestamp="1615943005217" />
+    <state width="1219" height="264" key="GridCell.Tab.0.center" timestamp="1615943005216">
+      <screen x="-1920" y="25" width="1920" height="1008" />
+    </state>
+    <state width="1219" height="264" key="GridCell.Tab.0.center/0.25.1680.1025/-1920.25.1920.1008@-1920.25.1920.1008" timestamp="1615943005216" />
+    <state width="1219" height="264" key="GridCell.Tab.0.left" timestamp="1615943005215">
+      <screen x="-1920" y="25" width="1920" height="1008" />
+    </state>
+    <state width="1219" height="264" key="GridCell.Tab.0.left/0.25.1680.1025/-1920.25.1920.1008@-1920.25.1920.1008" timestamp="1615943005215" />
+    <state width="1219" height="264" key="GridCell.Tab.0.right" timestamp="1615943005216">
+      <screen x="-1920" y="25" width="1920" height="1008" />
+    </state>
+    <state width="1219" height="264" key="GridCell.Tab.0.right/0.25.1680.1025/-1920.25.1920.1008@-1920.25.1920.1008" timestamp="1615943005216" />
   </component>
 </project>

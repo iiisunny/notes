@@ -8,8 +8,9 @@ public class Test07 {
 
     // 遍历
     public static int fibonacci(int n) {
-        if (n <= 1)
+        if (n <= 1) {
             return n;
+        }
         int pre2 = 0, pre1 = 1;
         int fib = 0;
         for (int i = 2; i <= n; i++) {
@@ -18,6 +19,15 @@ public class Test07 {
             pre1 = fib;
         }
         return fib;
+    }
+
+    // 递归
+    public  static int f(int n){
+        if( n == 1 || n == 2 )
+            return 1;
+        else{
+            return f( n - 1 ) + f( n - 2 );
+        }
     }
 
 

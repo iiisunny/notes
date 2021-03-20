@@ -44,7 +44,7 @@ public class Test04{
 
         // 递归，假设root的左右子树都已经构建完毕，那么只要将左右子树安到root左右即可
         // Arrays.copyOfRange(int[],start,end)是[)的区间
-        root.left = reConstructBinaryTree(Arrays.copyOfRange(pre,1,rootIndex+1), Arrays.copyOfRange(in,0,rootIndex));
+        root.left = reConstructBinaryTree(Arrays.copyOfRange(pre,1,rootIndex+1), Arrays.copyOfRange(in,0, rootIndex));
         root.right = reConstructBinaryTree(Arrays.copyOfRange(pre,rootIndex+1, pre.length), Arrays.copyOfRange(in,rootIndex+1, in.length));
 
         return root;

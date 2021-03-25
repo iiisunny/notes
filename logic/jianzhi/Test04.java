@@ -19,33 +19,33 @@ public class Test04{
         TreeNode(int x) { val = x; }
      }
 
-    public static TreeNode reConstructBinaryTree(int [] pre, int [] in) {
+    public static TreeNode buildTree(int [] preorder, int [] inorder) {
 
         // 数组长度为0的时候要处理
-        if(pre.length == 0){
+        if(preorder.length == 0){
             return null;
         }
 
-        int rootVal = pre[0];
+        int rootVal = preorder[0];
 
-        if(pre.length == 1){
+        if(preorder.length == 1){
             return new TreeNode(rootVal);
         }
 
         //我们先找到root所在的位置，确定好前序和中序中左子树和右子树序列的范围
         TreeNode root = new TreeNode(rootVal);
-        int rootIndex = 0;
-        for(int i=0; i<in.length; i++){
-            if(rootVal == in[i]){
-                rootIndex = i;
+        int rootinorderdex = 0;
+        for(int i=0; i<inorder.length; i++){
+            if(rootVal == inorder[i]){
+                rootinorderdex = i;
                 break;
             }
         }
 
         // 递归，假设root的左右子树都已经构建完毕，那么只要将左右子树安到root左右即可
         // Arrays.copyOfRange(int[],start,end)是[)的区间
-        root.left = reConstructBinaryTree(Arrays.copyOfRange(pre,1,rootIndex+1), Arrays.copyOfRange(in,0, rootIndex));
-        root.right = reConstructBinaryTree(Arrays.copyOfRange(pre,rootIndex+1, pre.length), Arrays.copyOfRange(in,rootIndex+1, in.length));
+        root.left = buildTree(Arrays.copyOfRange(preorder,1,rootinorderdex+1), Arrays.copyOfRange(inorder,0, rootinorderdex));
+        root.right = buildTree(Arrays.copyOfRange(preorder,rootinorderdex+1, preorder.length), Arrays.copyOfRange(inorder,rootinorderdex+1, inorder.length));
 
         return root;
     }
@@ -76,10 +76,10 @@ public class Test04{
 
 
     public static void main(String[] args) {
-        int pre[] = {1,2,4,7,3,5,6,8};
-        int in[] = {4,7,2,1,5,3,8,6};
+        int preorder[] = {1,2,4,7,3,5,6,8};
+        int inorder[] = {4,7,2,1,5,3,8,6};
 
-        ArrayList<Integer> treePrint = PrintFromTopToBottom(reConstructBinaryTree(pre, in));
+        ArrayList<Integer> treePrint = PrintFromTopToBottom(buildTree(preorder, inorder));
         for(int node : treePrint){
             System.out.println(node);
         }

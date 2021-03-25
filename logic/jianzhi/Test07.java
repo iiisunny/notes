@@ -8,7 +8,7 @@ public class Test07 {
 
     // 遍历
     public static int fibonacci(int n) {
-        if (n <= 1) {
+        if (n==0||n==1) {
             return n;
         }
         int pre2 = 0, pre1 = 1;

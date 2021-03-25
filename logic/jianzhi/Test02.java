@@ -2,7 +2,8 @@ public class Test02 {
     /**
      * 请实现一个函数，把字符串中的每个空格替换成"%20"，例如“We are happy.“，则输出”We%20are%20happy.“。
      * StringBuffer 线程安全
-     * @param str    要转换的字符数组
+     *
+     * @param str 要转换的字符数组
      * @return 转换后使用的字符长度，-1表示处理失败
      */
     public static String replaceSpace(StringBuffer str) {
@@ -30,7 +31,26 @@ public class Test02 {
         return str.toString();
     }
 
-    public static void main(String[] args) {
+    public String replaceSpace1(String s) {
+        int length = s.length();
+        char[] array = new char[length * 3];
+        int size = 0;
+        for (int i = 0; i < length; i++) {
+            char c = s.charAt(i);
+            if (c == ' ') {
+                array[size++] = '%';
+                array[size++] = '2';
+                array[size++] = '0';
+            } else {
+                array[size++] = c;
+            }
+        }
+        String newStr = new String(array, 0, size);
+        return newStr;
+    }
+
+
+    public static void main (String[]args){
         StringBuffer str1 = new StringBuffer("aaa a");
         StringBuffer str2 = new StringBuffer("We are happy.");
         replaceSpace(str1);
@@ -39,15 +59,5 @@ public class Test02 {
         System.out.println(str2);
     }
 
-
-
-
-
-
-
-
-
-
-
-
 }
+

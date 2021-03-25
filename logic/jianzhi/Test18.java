@@ -94,6 +94,8 @@ public class Test18 {
         for (int i = 0; i < arrs.length; i++) {
             System.out.println(arrs[i]);
         }
+
+
     }
 
 

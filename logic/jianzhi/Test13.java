@@ -25,6 +25,34 @@ public class Test13 {
 
     }
 
+    /**
+     *
+     * 输入一个整数数组，实现一个函数来调整该数组中数字的顺序，使得所有奇数位于数组的前半部分，所有偶数位于数组的后半部分。
+     *
+     * 双指针: 双头部遍历
+     *
+     * 设定2个指针,s1,s2
+     * 同时从第一个元素出发
+     * s1找到偶数,s2找到奇数
+     * 如果偶数在奇数前面,交换位置
+     * 否则偶数不动,不交换,继续找后面的奇数
+     * @param nums
+     */
+
+    public int[] exchange(int[] nums) {
+        int i=0,j=0;
+        while(j<nums.length){
+            if((nums[j]&1)!=0){
+                int tmp=nums[i];
+                nums[i]=nums[j];
+                nums[j]=tmp;
+                i++;
+            }
+            j++;
+        }
+        return nums;
+    }
+
     public static void main(String[] args) {
         int[] array = {0,1,2,3,3,5,6,7,9,10,12,15,14,11};
         reOrderarrayay(array);

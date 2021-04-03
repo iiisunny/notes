@@ -31,7 +31,7 @@ public class Test32 {
 
     public int[] levelOrder(TreeNode root) {
         if (root==null){
-            return null;
+            return new int[0];
         }
         ArrayList<Integer> list = new ArrayList<>();
         // 用list从因为如果用列表，队首出元素复杂度是 O(N) ，因此有性能损失
@@ -42,10 +42,10 @@ public class Test32 {
             TreeNode node = treenode.poll();
             list.add(node.val);
             if (node.left!=null){
-                treenode.add(root.left);
+                treenode.add(node.left);
             }
             if (node.right!=null){
-                treenode.add(root.right);
+                treenode.add(node.right);
             }
         }
         int[] arr = new int[list.size()];

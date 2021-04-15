@@ -12,6 +12,17 @@ public class Test14 {
 
     }
 
+    /**
+     * 快慢双指针
+     * 先遍历统计链表长度，记为 n ；
+     * 设置一个指针走 (n-k) 步，即可找到链表倒数第 k 个节点。
+     *
+     * 时间复杂度 O(N)
+     * 空间复杂度 O(1)
+     * @param head
+     * @param k
+     * @return
+     */
     public static ListNode findKthToTail(ListNode head, int k) {
 
         // 输入的链表不能为空，并且k大于0
@@ -19,31 +30,26 @@ public class Test14 {
             return null;
         }
 
-        // 指向头结点
+        // 双指针指向头结点
         ListNode pointer = head;
+        ListNode late = head;
 
-        // 倒数第k个结点与倒数第一个结点相隔k-1个位置
-        // pointer先走k-1个位置
-        for (int i = 1; i < k; i++) {
-            // 说明还有结点
-            if (pointer.next != null) {
+        // 前指针向前走k步
+        for (int i = 0; i < k; i++) {
+            if (pointer != null){
                 pointer = pointer.next;
-            } else { // 已经没有节点了，但是i还没有到达k-1说明k太大，链表中没有那么多的元素
-                // 返回结果
+            }else {
                 return null;
             }
-
         }
 
-        // pointer还没有走到链表的末尾，那么pointer和head一起走，
-        // 当pointer走到最后一个结点即，pointer.next=null时，head就是倒数第k个结点
-        while (pointer.next != null) {
-            head = head.next;
+        // 双指针共同移动
+        while (pointer != null) {
             pointer = pointer.next;
+            late = late.next;
         }
 
-        // 返回结果
-        return head;
+        return late;
     }
 
     public static void main(String[] args) {
@@ -74,10 +80,14 @@ public class Test14 {
         head.next.next.next.next.next.next.next.next = new ListNode();
         head.next.next.next.next.next.next.next.next.value = 9;
 
-        System.out.println(findKthToTail(head, 1).value); // 倒数第一个
-        System.out.println(findKthToTail(head, 6).value); // 中间的一个
-        System.out.println(findKthToTail(head, 9).value); // 倒数最后一个就是顺数第一个
+//        System.out.println(findKthToTail(head, 1).value); // 倒数第一个
+//        System.out.println(findKthToTail(head, 6).value); // 中间的一个
+//        System.out.println(findKthToTail(head, 9).value); // 倒数最后一个就是顺数第一个
 
-        System.out.println(findKthToTail(head, 10));
+//        System.out.println(findKthToTail(head, 10));
+
+        ListNode head1 = new ListNode();
+        head1.value = 1;
+        System.out.println(findKthToTail(head1, 1));
     }
 }

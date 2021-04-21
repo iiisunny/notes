@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * 圆圈中最后剩下的数字
  * 0,1,···,n-1这n个数字排成一个圆圈，从数字0开始，每次从这个圆圈里删除第m个数字（删除后从下一个数字开始计数）。
@@ -17,10 +20,27 @@ public class Test69 {
      * 空间复杂度 O(1)
      */
     public int lastRemaining(int n, int m) {
-        int x = 0;
+        int index = 0;
         for (int i = 2; i <= n; i++) {
-            x = (x + m) % i;
+            index = (index + m) % i;
         }
-        return x;
+        return index;
     }
+    public int lastRemainin1g(int n, int m) {
+        List<Integer> list = new LinkedList<>();
+        for (int i = 0; i < n; i++) {
+            list.add(i);
+        }
+        int index = 0;
+        while (list.size()>1){
+            for (int i = 0; i < m-1; i++) {
+                index++;
+            }
+            // index = (index+m-1) % list.size();
+            index = (index+m-1) % list.size();
+            list.remove(index);
+        }
+        return list.get(0);
+    }
+
 }

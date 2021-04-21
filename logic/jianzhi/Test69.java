@@ -33,10 +33,9 @@ public class Test69 {
         }
         int index = 0;
         while (list.size()>1){
-            for (int i = 0; i < m-1; i++) {
-                index++;
-            }
-            // index = (index+m-1) % list.size();
+            // for (int i = 0; i < m-1; i++) {
+            //    index++;
+            //}
             index = (index+m-1) % list.size();
             list.remove(index);
         }

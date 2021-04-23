@@ -1,49 +1,33 @@
 /**
  * 快速排序
  * 平均：平均：时间复杂度：O(nlog2n) 空间复杂度：O(nlog2n)
- * 过程：通过一趟排序将待排记录分隔成独立的两部分，其中一部分记录的关键字均比另一部分的关键字小，则可分别对这两部分记录继续进行排序，以达到整个序列有序。
- *      说白了就是给基准数据找其正确索引位置的过程
+ * 过程：以数组某个元素（一般选取首元素）为 基准数 ，将所有小于基准数的元素移动至其左边，大于基准数的元素移动至其右边。
  * 稳定性：不稳定
  */
 
 public class QuickSort {
 
     // https://blog.csdn.net/shujuelin/article/details/82423852
-    public static void quickSort(int[] arr,int low,int high){
-        int i,j,temp,t;
-        if(low>high){
-            return;
+    public static void quickSort(int[] arr, int l, int r) {
+        // 子数组长度为 1 时终止递归
+        if (l >= r) return;
+        // 哨兵划分操作（以 arr[l] 作为基准数）
+        int i = l, j = r;
+        while (i < j) {
+            while (i < j && arr[j] >= arr[l]) j--;
+            while (i < j && arr[i] <= arr[l]) i++;
+            swap(arr, i, j);
         }
-        i=low;
-        j=high;
-        //temp就是基准位
-        temp = arr[low];
-
-        while (i<j) {
-            //先看右边，依次往左递减
-            while (temp<=arr[j]&&i<j) {
-                j--;
-            }
-            //再看左边，依次往右递增
-            while (temp>=arr[i]&&i<j) {
-                i++;
-            }
-            //如果满足条件则交换
-            if (i<j) {
-                t = arr[j];
-                arr[j] = arr[i];
-                arr[i] = t;
-            }
-        }
-        //最后将基准为与i和j相等位置的数字交换
-        arr[low] = arr[i];
-        arr[i] = temp;
-        //递归调用左半数组
-        quickSort(arr, low, j-1);
-        //递归调用右半数组
-        quickSort(arr, j+1, high);
+        swap(arr, i, l);
+        // 递归左（右）子数组执行哨兵划分
+        quickSort(arr, l, i - 1);
+        quickSort(arr, i + 1, r);
     }
-
+    private static void swap(int[] arr, int i, int j) {
+        int tmp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = tmp;
+    }
 
 
     public static void main(String[] args){

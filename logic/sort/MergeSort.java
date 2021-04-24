@@ -39,4 +39,78 @@ public class MergeSort {
         }
         return result;
     }
+
+
+
+
+    public static int[] merge1(int[] arr){
+        if (arr.length < 2){
+            return arr;
+        }
+        int mid = arr.length / 2;
+        int[] left = Arrays.copyOfRange(arr,0,mid);
+        int[] right = Arrays.copyOfRange(arr,mid,arr.length);
+        return dfs(merge1(left), merge1(right));
+    }
+
+    public static int[] dfs(int[] left, int[] right){
+        int[] result = new int[left.length + right.length];
+        for (int index = 0,i = 0,j = 0; index < result.length;index++){
+            if (i >= left.length){
+                result[index] = right[j++];
+            }
+            else if (j >= right.length){
+                result[index] = right[i++];
+            }
+            else if (left[i] > right[j]){
+                result[index] = right[j++];
+            }
+            else {
+                result[index] = right[i++];
+            }
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1,3,2,4,6,8,3,2,1,5};
+        int[] arrs = merge1(arr);
+        for (int j : arrs) {
+            System.out.println(j);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

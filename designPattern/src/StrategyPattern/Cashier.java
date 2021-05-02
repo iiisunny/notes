@@ -1,3 +1,5 @@
+package StrategyPattern;
+
 public class Cashier {
     /**
      * 策略对象

@@ -1,3 +1,5 @@
+package StrategyPattern;
+
 import java.math.BigDecimal;
 
 public class StrategyPatternTest {

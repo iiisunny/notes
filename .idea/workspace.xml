@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,9 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9bd54c1-ad89-4ecd-9ab7-3bfd7d251526" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/logic/jianzhi/Test06.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/designPattern/src/FlyweightPattern/FlyweightPattern.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logic/jianzhi/Test04.java" beforeDir="false" afterPath="$PROJECT_DIR$/logic/jianzhi/Test04.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designPattern/src/AdapterPattern/AdapterPattern.md" beforeDir="false" afterPath="$PROJECT_DIR$/designPattern/src/AdapterPattern/AdapterPattern.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designPattern/src/BuilderPattern/BuilderPattern.md" beforeDir="false" afterPath="$PROJECT_DIR$/designPattern/src/BuilderPattern/BuilderPattern.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,22 +37,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1pnNi8aBfCDzVX5GqJLnwW7j0Xk" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/logic/jianzhi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -55,6 +55,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -133,6 +138,15 @@
       <workItem from="1615939835760" duration="2671000" />
       <workItem from="1615986350551" duration="3268000" />
       <workItem from="1616065942979" duration="4410000" />
+      <workItem from="1623163460553" duration="369000" />
+      <workItem from="1623164313678" duration="235000" />
+      <workItem from="1623248154769" duration="184000" />
+      <workItem from="1623597236324" duration="2999000" />
+      <workItem from="1624111195825" duration="67000" />
+      <workItem from="1624287039175" duration="412000" />
+      <workItem from="1624371867398" duration="312000" />
+      <workItem from="1624548199919" duration="1040000" />
+      <workItem from="1624977766596" duration="817000" />
     </task>
     <servers />
   </component>
@@ -151,30 +165,8 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state width="1449" height="254" key="GridCell.Tab.0.bottom" timestamp="1616060037172">
-      <screen x="-1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1449" height="254" key="GridCell.Tab.0.bottom/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1616060037172" />
-    <state width="1219" height="264" key="GridCell.Tab.0.bottom/0.25.1680.1025/-1920.25.1920.1008@-1920.25.1920.1008" timestamp="1615943221258" />
-    <state width="1219" height="264" key="GridCell.Tab.0.bottom/0.25.1680.978@0.25.1680.978" timestamp="1615953517309" />
-    <state width="1449" height="254" key="GridCell.Tab.0.center" timestamp="1616060037171">
-      <screen x="-1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1449" height="254" key="GridCell.Tab.0.center/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1616060037171" />
-    <state width="1219" height="264" key="GridCell.Tab.0.center/0.25.1680.1025/-1920.25.1920.1008@-1920.25.1920.1008" timestamp="1615943221256" />
-    <state width="1219" height="264" key="GridCell.Tab.0.center/0.25.1680.978@0.25.1680.978" timestamp="1615953517307" />
-    <state width="1449" height="254" key="GridCell.Tab.0.left" timestamp="1616060037170">
-      <screen x="-1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1449" height="254" key="GridCell.Tab.0.left/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1616060037170" />
-    <state width="1219" height="264" key="GridCell.Tab.0.left/0.25.1680.1025/-1920.25.1920.1008@-1920.25.1920.1008" timestamp="1615943221255" />
-    <state width="1219" height="264" key="GridCell.Tab.0.left/0.25.1680.978@0.25.1680.978" timestamp="1615953517306" />
-    <state width="1449" height="254" key="GridCell.Tab.0.right" timestamp="1616060037171">
-      <screen x="-1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1449" height="254" key="GridCell.Tab.0.right/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1616060037171" />
-    <state width="1219" height="264" key="GridCell.Tab.0.right/0.25.1680.1025/-1920.25.1920.1008@-1920.25.1920.1008" timestamp="1615943221257" />
-    <state width="1219" height="264" key="GridCell.Tab.0.right/0.25.1680.978@0.25.1680.978" timestamp="1615953517308" />
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
